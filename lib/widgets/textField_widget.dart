@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class BuildTextField extends StatelessWidget {
   final icon;
-  var letterSpacing;
+  final letterSpacing;
   final hintText;
 
   BuildTextField({@required this.icon, this.letterSpacing, this.hintText});

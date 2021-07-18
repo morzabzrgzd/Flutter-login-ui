@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:glass_kit/glass_kit.dart';
 import 'package:okey_vila/screens/otp_screen.dart';
 import 'package:okey_vila/widgets/button_widget.dart';
 import 'package:okey_vila/widgets/textField_widget.dart';
@@ -31,19 +32,42 @@ class LoginScreen extends StatelessWidget {
                     titelText(
                         sizeTitle: size.width * 0.1,
                         sizeSubtitle: size.width * 0.04),
-                    Container(
-                      width: double.infinity,
+                    GlassContainer(
+                      height: size.height * 0.35,
+                      width: size.width * 0.9,
+                      borderRadius: BorderRadius.circular(25),
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.white.withOpacity(0.40),
+                          Colors.white.withOpacity(0.10)
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
+                      borderGradient: LinearGradient(
+                        colors: [
+                          Colors.white.withOpacity(0.60),
+                          Colors.white.withOpacity(0.10),
+                          Colors.lightBlueAccent.withOpacity(0.05),
+                          Colors.lightBlueAccent.withOpacity(0.6)
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        stops: [0.0, 0.39, 0.40, 1.0],
+                      ),
+                      blur: 15.0,
+                      borderWidth: 1.5,
+                      elevation: 3.0,
+                      isFrostedGlass: true,
+                      shadowColor: Colors.black.withOpacity(0.20),
+                      alignment: Alignment.center,
+                      frostedOpacity: 0.12,
                       margin: EdgeInsets.symmetric(horizontal: 30),
                       padding: EdgeInsets.symmetric(
                         horizontal: size.width * 0.06,
                         vertical: size.height * 0.04,
                       ),
-                      // height: 300,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Colors.white.withOpacity(.25),
-                      ),
-                      child: Column(
+                       child: Column(
                         children: [
                           Text(
                             'لطفا شماره همراه خود را وارد کن',
@@ -61,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                           SizedBox(height: size.height * 0.03),
                           Button(
                             onTab: () {
-                              Navigator.push( 
+                              Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => OtpScreen(),
@@ -86,7 +110,7 @@ class LoginScreen extends StatelessWidget {
                                 'وارد شو',
                                 style: TextStyle(
                                   decoration: TextDecoration.underline,
-                                  color: Colors.red.shade400,
+                                  color: Colors.blue.shade400,
                                   fontSize: size.width * 0.04,
                                 ),
                               ),
@@ -94,7 +118,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               )

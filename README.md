@@ -1,8 +1,6 @@
 
 # Fluttet Login Ui
 
-![Screenshot_1626630474](https://user-images.githubusercontent.com/87581799/126079036-a69aa370-9618-4f79-b9d4-1e42313cb10b.png)
-![Screenshot_1626630470](https://user-images.githubusercontent.com/87581799/126079066-2e11e044-ead2-4bf8-bc80-3ea0742e1435.png)
 
 ایده ی طراحی
 
